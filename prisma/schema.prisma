@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Feature {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String
+  votes       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Vote {
+  id         String   @id @default(cuid())
+  featureId  String
+  ipAddress  String
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  @@index([featureId])
+  @@index([ipAddress])
+}
