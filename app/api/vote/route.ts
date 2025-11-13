@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     // Get user IP address
     const forwarded = request.headers.get('x-forwarded-for');
-    const ipAddress = forwarded ? forwarded.split(',')[0] : request.ip || 'unknown';
+    const ipAddress = forwarded ? forwarded.split(',')[0].trim() : 'unknown';
     const userAgent = request.headers.get('user-agent') || '';
 
     // Check if user has already voted for this feature (optional anti-spam)

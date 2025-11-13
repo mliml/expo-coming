@@ -28,7 +28,7 @@ export default function Home() {
           </p>
 
           <p className="text-base md:text-lg text-gray-300 mb-16 max-w-xl mx-auto">
-            Stay tuned. We'll help you succeed with your first expo in China
+            Stay tuned. We&apos;ll help you succeed with your first expo in China
           </p>
         </div>
 

@@ -91,7 +91,7 @@ export default function FeatureVoting() {
         Vote for Your Most Desired Feature
       </h2>
       <p className="text-gray-300 text-center mb-8 text-sm md:text-base">
-        Help us understand your needs by voting for the features you're most excited about
+        Help us understand your needs by voting for the features you&apos;re most excited about
       </p>
 
       <div className="space-y-4">
